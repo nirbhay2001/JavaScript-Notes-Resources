@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+
+    body{
+        font-family: 'Inconsolata', sans-serif;
+        background: #2a364f;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>A function is triggered the user is pressing a key  in the input field.
+            </p>
+            <br>
+            <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+            <br>
+            <p id="keys"></p>
+        </div>
+    </div>
+
+    <script>
+        const keyPress = () => {
+            document.getElementById('keys').innerHTML = `ypu press ${event.key} and it's code is ${event.code}`;
+        }
+
+        // better to use 2nd and 3rd once
+        const keyDown = () => {
+            document.getElementById('keys').innerHTML = 'key is Down';
+            // when we click backslash to delete then it will run
+        }
+
+        const keyUp = () => {
+            document.getElementById('keys').innerHTML = 'key is Up';
+            // when we click backslash to delete then it will run
+        }
+
+
+    </script>
+</body>
+</html>

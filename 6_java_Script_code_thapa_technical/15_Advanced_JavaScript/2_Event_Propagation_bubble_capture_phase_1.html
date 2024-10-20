@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+   
+       body{
+           font-family: 'Inconsolata', sans-serif;
+           background: #2a364f;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .parentDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 500px;
+        border: 2px solid black;
+        background-color: aqua;
+        border: #1dd1a1;
+        box-shadow: 0 10px 13px -10px rgba(0,0,0,0.4);
+       }
+
+       .childDiv{
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+        background-color: #1dd1a1;
+        border: 10px solid #10ac84;
+        box-shadow: 0 10px 13px -10px rgba(0,0,0,0.4);
+       }
+    </style>
+</head>
+<body>
+    <div class="parentDiv" id="parentId">
+        <div class="childDiv" id="childId"></div>
+    </div>
+    <script>
+        const parentId = document.getElementById('parentId');
+        const childId = document.getElementById('childId');
+
+        const parentCall = () => {
+            alert('Parent Div Call');
+            console.log('Parent Div Call');
+            
+        }
+
+        const childCall = () => {
+            alert('Child Div Call');
+            console.log('Child Div Call');
+          
+        }
+
+        parentId.addEventListener('click',parentCall);
+        childId.addEventListener('click',childCall);
+
+        // Bydefault event propagation bubbling phase me rahta hai
+
+    </script>
+</body>
+</html>

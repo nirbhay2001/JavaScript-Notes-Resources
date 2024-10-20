@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Data</title>
+</head>
+<body>
+    <script>
+
+        var senddata = {"name" : "vinod", "lastname":"Thapa"}
+        var changedata = JSON.stringify(senddata);
+        window.location="3_sendData.html?values=" +changedata;
+
+        var jsonobject = JSON.parse(changedata);
+        document.write(jsonobject.name); // output: vinod
+
+    </script>
+</body>
+</html>

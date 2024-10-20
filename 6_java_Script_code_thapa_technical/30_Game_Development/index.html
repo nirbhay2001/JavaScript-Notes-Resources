@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Game Development</title>
+    <style>
+        *{ margin: 0;
+           padding: 0;
+        }
+        .hide{
+            display: none;
+        }
+        .car{
+            width: 50px;
+            height: 70px;
+            background: red;
+            position: absolute;
+            /* left: 350px; */
+            bottom: 120px;
+        }
+
+        .lines{
+            width: 10px;
+            height: 100px;
+            background: white;
+            position: absolute;
+            margin-left: 195px;
+        }
+        .gameArea{
+            width: 400px;
+            height: 100vh;
+            background: #2d3436;
+            margin: auto; 
+            /* margin: auto; // esase gameArea wala div center per aa jayega */
+            position: relative;
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="carGame">
+        <div class="score">
+            <div class="startScreen">
+                <p>Press here to start <br>
+                   Arrow keys to move <br>
+                   If you hit another car you will lose.
+
+                </p>
+            </div>
+        </div>
+        <div class="gameArea hide"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

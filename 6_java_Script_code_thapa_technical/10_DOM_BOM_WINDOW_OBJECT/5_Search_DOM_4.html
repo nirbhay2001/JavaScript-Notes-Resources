@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+
+        body{
+            font-family: 'Inconsolata', sans-serif;
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+
+        button{
+            display:inline-block;
+            background: #F88627;
+            color: #F4F4F4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 100000;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        p{
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+        }
+        h1{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">Plz like the video</p>
+    <p class="para">plz share this video</p>
+    <p>Don't forget to subscribe my Channel</p>
+    <h1 id="heading">Changed the contact of the h1</h1>
+
+    <!-- <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">malefemale</label>
+        <input type="radio" name="gender" id="">
+    </form> -->
+
+    <button onclick="changeContent()">click Me</button>
+
+    <script>
+        const changeContent = () => {
+
+            // We can directly write
+            document.getElementById('heading').innerHTML = "Welcome to thapa Technical";
+
+            console.log(document.getElementsByTagName('p'));
+
+        }
+    </script>
+</body>
+</html>

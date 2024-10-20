@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+
+    body{
+        font-family: 'Inconsolata', sans-serif;
+        background: #2a364f;
+    }
+    </style>
+</head>
+<body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragrapg, and sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets the color of the text to green.
+    </p>
+
+    <script>
+        function mouseDown(){
+            document.getElementById('myP').style.color = "#F8B627";
+        }
+
+        function mouseUp(){
+           document.getElementById("myP").style.color = 'red'
+        }
+    </script>
+</body>
+</html>

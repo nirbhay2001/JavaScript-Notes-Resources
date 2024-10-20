@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+   
+       body{
+           font-family: 'Inconsolata', sans-serif;
+           background: #2a364f;
+       }
+       </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+            <p>Click "Stop" to prevent the first function to execute.</p>
+            <p>(You must click "Stop" before the 2 seconds are up.)</p>
+
+            <button onclick="myVar = setTimeout(myFunction, 2000)">Try it</button>
+
+            <button onclick="clearTimeout(myVar)">Stop it</button>
+
+            <!-- clearTimeout ko use karne ke liye setTimeout ke reference ki jarurat padegi hamesha. -->
+        
+        </div>
+    </div>
+
+    <script>
+        function myFunction(){
+            alert("Hello");
+        }
+    </script>
+</body>
+</html>

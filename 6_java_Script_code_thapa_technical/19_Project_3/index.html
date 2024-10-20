@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Light On Off</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+
+   body{
+       font-family: 'Inconsolata', sans-serif;
+       background: #2a364f;
+   }
+   </style>
+</head>
+<body>
+    <div class="main-heading">
+        <h1>Can you turn the light on?</h1>
+        <button onclick="getElementById('myImage').src='lighton.jpeg'">Turn on the light</button>
+        <img src="lightoff.jpeg" alt="lightoffpic" id="myImage">
+        <button onclick="getElementById('myImage').src='lightoff.jpeg'">Turn off the light</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

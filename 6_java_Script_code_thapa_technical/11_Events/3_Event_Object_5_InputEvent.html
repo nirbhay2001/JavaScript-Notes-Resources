@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+   
+       body{
+           font-family: 'Inconsolata', sans-serif;
+           background: #2a364f;
+       }
+       </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your Name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label for="">Choose an ice cream flavor
+                <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                    <option value="">Select One ...</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="sardine">Sardine</option>
+                    <option value="vanilla">Vanilla</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        const selectElement = () => {
+
+            const inputChange = document.getElementById('ice').value; 
+            const iceCreams = document.getElementById('iceCreams').value; // es tarike se hum input aur select option ka reference pa liya
+            // jab text form me rahta hai to .innerHTML likhana padta hai lekin jab input form me rahta hai to .value likhana padta hai
+
+            // console.log(`${inputChange} and ${iceCreams}`);
+
+            const result = document.getElementById('result');
+            result.innerHTML = `Mr ${inputChange} select ${iceCreams} ice-cream flavour`;
+
+
+        }
+        
+    </script>
+</body>
+</html>

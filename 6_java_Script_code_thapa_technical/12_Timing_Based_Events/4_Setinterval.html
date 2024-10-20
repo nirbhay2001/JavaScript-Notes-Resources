@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsoleata:400,700");
+   
+       body{
+           font-family: 'Inconsolata', sans-serif;
+           background: #2a364f;
+       }
+       </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>can you stop me when I reach at 5 ?</p>
+            <br>
+            <button id="btn">Cleck Here</button>
+        </div>
+    </div>
+    <script>
+       const stopNum = document.querySelector('p');
+       const btn = document.querySelector('#btn');
+        let num = 0;
+       const showMyNum = () => {
+        stopNum.innerHTML = "Loading ... ";
+
+        setInterval(() => {
+            stopNum.innerHTML = `${num}`;
+            num++;
+        },1000)
+       }
+       btn.addEventListener('click', showMyNum);
+
+       // setInterval ak loop ki tarah kam karta hai
+
+    </script>
+</body>
+</html>

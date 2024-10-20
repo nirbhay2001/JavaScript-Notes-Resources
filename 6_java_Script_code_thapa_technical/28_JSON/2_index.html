@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var jsonobject = {
+            "firstname" : "Vinod",
+            "lastname" : "Thapa",
+            "age" : 24,
+            "profession" : "webdeveloper"
+        }
+
+        // document.write(jsonobject.lastname); // output: Thapa
+
+        for(showalldata in jsonobject){
+            document.write(showalldata+"<br>"); // esase jsonobject ka pura data dikha dega; esase key milega
+        }
+
+        for(showalldata in jsonobject){
+            document.write(jsonobject[showalldata]+"<br>"); // esase sara value mil jayega
+        }
+
+        // Modify Value
+        jsonobject.firstname = "ThapaTechnical";
+
+        // Add new key value pair
+        jsonobject.middlename = "Bahadur";
+
+
+        // Delete key value pair
+
+        for(showalldata in jsonobject){
+            document.write(jsonobject[showalldata]+"<br>"); // esase sara value mil jayega
+        }
+
+        // Delete key value pair
+        delete jsonobject.middlename;
+
+        
+        // Array in JSON
+        var jsonobject1 = {
+            "array" : ["vinod", "bahadur", "Thapa"]
+        }
+
+        document.write(jsonobject.array); // output: vinod, bahadur, Thapa
+
+
+        // Array Object in JSON
+        var jsonobject2 = {
+            "FIFA" : [
+                {
+                    "countryname" : "Brazil"
+                },
+                {
+                    "countryname" : "Portugal"
+                },
+                {
+                    "countryname" : "Argentina"
+                }
+            ]
+        }
+
+        document.write(jsonobject2.FIFA[0]); // output: [object object]
+        document.write(jsonobject2.FIFA[0].countryname); // outname: Brazil
+
+        var jsonobject3 = {
+            "FIFA" : [
+                {
+                    "countryname" : "Brazil",
+                    "BestPlayer" : "Neymar"
+                },
+                {
+                    "countryname" : "Portugal",
+                    "BestPlayer" : "Ronaldo"
+                },
+                {
+                    "countryname" : "Argentina",
+                    "BestPlayer" : "Messi"
+
+                }
+            ]
+        }
+
+        document.write(jsonobject2.FIFA[0].countryname); // output: Brazil
+        document.write(jsonobject2.FIFA[0].BestPlayer); // output: Neymar
+
+
+        for(x in jsonobject3.FIFA){
+            document.write(x); // output: 0 1 2
+        }
+
+        for(x in jsonobject3.FIFA){
+            for(inner_x in jsonobject3.FIFA[x]){
+                // document.write(inner_x );
+                document.write(jsonobject3.FIFA[x][inner_x]+"<br>")
+            }
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>
